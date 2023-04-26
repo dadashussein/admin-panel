@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ReactSortable } from "react-sortablejs";
 //spinner
 import { PuffLoader } from "react-spinners";
+import Image from "next/image";
 
 const ProductForm = ({
   _id,
@@ -158,7 +159,14 @@ const ProductForm = ({
                   className="h-24 bg-white p-4 shadow-sm rounded-md border border-r-gray-200"
                   key={link}
                 >
-                  <img src={link} className="rounded-lg" alt={link.length} />
+                  <Image
+                    width={50}
+                    height={50}
+                    loading="lazy"
+                    src={link}
+                    className="rounded-lg"
+                    alt={link.length}
+                  />
                 </div>
               ))}
           </ReactSortable>
