@@ -22,6 +22,7 @@ export const authOptions = {
       }
     },
   },
+  jwt: false,
 };
 
 export default NextAuth(authOptions);
